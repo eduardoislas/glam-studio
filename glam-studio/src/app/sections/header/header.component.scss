@@ -34,15 +34,17 @@
   font-size: 0.9rem;
 }
 
-.header__nav--open {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  padding: 1rem 1.5rem;
-  background: var(--color-black);
+@media (max-width: 767.98px) {
+  .header__nav--open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem 1.5rem;
+    background: var(--color-black);
+  }
 }
 
 .header__toggle {
