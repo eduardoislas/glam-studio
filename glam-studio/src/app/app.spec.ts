@@ -1,24 +1,39 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { App } from './app';
 
 describe('App', () => {
+  let fixture: ComponentFixture<App>;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [App],
-    })
-      .compileComponents();
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(App);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+  it('renders every section in order', () => {
+    const el: HTMLElement = fixture.nativeElement;
+    const sectionTags = Array.from(el.children).map((child) =>
+      child.tagName.toLowerCase()
+    );
+    expect(sectionTags).toContain('app-header');
+    expect(sectionTags).toContain('app-footer');
 
-  it('should render title', async () => {
-    const fixture = TestBed.createComponent(App);
-    await fixture.whenStable();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, glam-studio');
+    const main = el.querySelector('main');
+    expect(main).toBeTruthy();
+    const mainChildren = Array.from(main!.children).map((child) =>
+      child.tagName.toLowerCase()
+    );
+    expect(mainChildren).toEqual([
+      'app-hero',
+      'app-about',
+      'app-services',
+      'app-gallery',
+      'app-team',
+      'app-location',
+      'app-final-cta',
+    ]);
   });
 });
