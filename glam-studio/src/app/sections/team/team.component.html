@@ -1,0 +1,13 @@
+<section id="nosotras" class="team section">
+  <h2>Nosotras</h2>
+  <div class="team__grid">
+    <article class="team__card" *ngFor="let member of team">
+      <img [src]="member.photo" [alt]="member.name" class="team__photo" />
+      <h3>{{ member.name }}</h3>
+      <p>{{ member.role }}</p>
+      <a [href]="member.instagramUrl" target="_blank" rel="noopener"
+        >Instagram</a
+      >
+    </article>
+  </div>
+</section>

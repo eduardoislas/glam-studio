@@ -1,0 +1,36 @@
+.team__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+}
+
+.team__photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.team__card h3 {
+  font-size: 1.25rem;
+}
+
+.team__card p {
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.team__card a {
+  font-size: 0.85rem;
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .team__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
