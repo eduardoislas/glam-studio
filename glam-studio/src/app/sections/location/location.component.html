@@ -1,0 +1,16 @@
+<section id="ubicacion" class="location section">
+  <h2>Horario y ubicación</h2>
+  <div class="location__grid">
+    <div class="location__info">
+      <p class="location__address">{{ address }}</p>
+      <p class="location__hours">{{ hours }}</p>
+    </div>
+    <iframe
+      class="location__map"
+      [src]="mapEmbedUrl"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Ubicación de Glam Studio"
+    ></iframe>
+  </div>
+</section>

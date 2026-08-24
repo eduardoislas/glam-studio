@@ -1,0 +1,24 @@
+.location__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+.location__address,
+.location__hours {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.location__map {
+  width: 100%;
+  height: 320px;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .location__grid {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
