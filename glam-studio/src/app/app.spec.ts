@@ -36,4 +36,21 @@ describe('App', () => {
       'app-final-cta',
     ]);
   });
+
+  it('resolves every header nav link to a real section id on the page', () => {
+    const el: HTMLElement = fixture.nativeElement;
+    const navLinks = Array.from(
+      el.querySelectorAll('.header__nav a')
+    ) as HTMLAnchorElement[];
+
+    expect(navLinks.length).toBeGreaterThan(0);
+
+    for (const link of navLinks) {
+      const href = link.getAttribute('href') ?? '';
+      expect(href.startsWith('#')).toBe(true);
+      const id = href.slice(1);
+      const target = el.querySelector('#' + id);
+      expect(target, `missing element for ${href}`).toBeTruthy();
+    }
+  });
 });

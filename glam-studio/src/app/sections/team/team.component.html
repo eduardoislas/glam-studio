@@ -5,7 +5,11 @@
       <img [src]="member.photo" [alt]="member.name" class="team__photo" />
       <h3>{{ member.name }}</h3>
       <p>{{ member.role }}</p>
-      <a [href]="member.instagramUrl" target="_blank" rel="noopener"
+      <a
+        [href]="member.instagramUrl"
+        target="_blank"
+        rel="noopener"
+        [attr.aria-label]="'Instagram de ' + member.name"
         >Instagram</a
       >
     </article>

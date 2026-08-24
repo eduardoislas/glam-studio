@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CONTACT } from '../../shared/contact.data';
 
 @Component({
@@ -9,4 +9,9 @@ import { CONTACT } from '../../shared/contact.data';
 })
 export class HeaderComponent {
   readonly whatsappUrl = CONTACT.whatsappUrl;
+  readonly isMenuOpen = signal(false);
+
+  toggleMenu(): void {
+    this.isMenuOpen.update((open) => !open);
+  }
 }

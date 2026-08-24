@@ -1,9 +1,18 @@
 <header class="header">
   <a class="header__brand" href="#top">
-    <img src="/logo.png" alt="Glam Studio" class="header__logo" />
+    <img src="/logo.png" alt="" class="header__logo" />
     <span class="header__name">Glam Studio</span>
   </a>
-  <nav class="header__nav">
+  <button
+    type="button"
+    class="header__toggle"
+    aria-label="Abrir menú"
+    [attr.aria-expanded]="isMenuOpen()"
+    (click)="toggleMenu()"
+  >
+    &#9776;
+  </button>
+  <nav class="header__nav" [class.header__nav--open]="isMenuOpen()">
     <a href="#servicios">Servicios</a>
     <a href="#galeria">Galería</a>
     <a href="#nosotras">Nosotras</a>
