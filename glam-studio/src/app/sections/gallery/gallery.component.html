@@ -1,11 +1,21 @@
 <section id="galeria" class="gallery section">
-  <h2>Galería</h2>
-  <div class="gallery__grid">
-    <img
-      *ngFor="let image of images"
-      [src]="image.src"
-      [alt]="image.alt"
-      loading="lazy"
-    />
+  <div class="gallery__head">
+    <span class="eyebrow">Nuestro trabajo</span>
+    <h2>Galería</h2>
   </div>
+  <div class="gallery__grid">
+    <div
+      class="gallery__item"
+      [class.gallery__item--lg]="image.size === 'lg'"
+      *ngFor="let image of images"
+    >
+      <img [src]="image.src" [alt]="image.alt" loading="lazy" />
+      <span class="gallery__item-cap">{{ image.caption }}</span>
+    </div>
+  </div>
+  <p class="gallery__more">
+    <a [href]="instagramUrl" target="_blank" rel="noopener"
+      >Ver más en Instagram · {{ instagramHandle }}</a
+    >
+  </p>
 </section>

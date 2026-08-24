@@ -6,9 +6,10 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 1.5rem;
   background: var(--color-black);
   color: var(--color-white);
+  border-bottom: 1px solid color-mix(in oklch, var(--color-gold) 25%, transparent);
 }
 
 .header__brand {

@@ -1,21 +1,12 @@
 .hero {
-  min-height: 80vh;
-  display: flex;
+  display: grid;
+  gap: 2.5rem;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 3rem 1.5rem;
-  background: linear-gradient(
-    160deg,
-    var(--color-black) 0%,
-    #2a2216 70%,
-    var(--color-gold) 160%
-  );
+  padding: 3.5rem 1.5rem;
+  background:
+    radial-gradient(500px 400px at 85% 15%, color-mix(in oklch, var(--color-gold) 22%, transparent), transparent 60%),
+    linear-gradient(155deg, var(--color-black) 0%, #201a10 55%, #33270f 100%);
   color: var(--color-white);
-}
-
-.hero__content {
-  max-width: 640px;
 }
 
 .hero__title {
@@ -25,12 +16,78 @@
 
 .hero__subtitle {
   font-size: 1.1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
+  font-weight: 300;
   opacity: 0.9;
 }
 
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero__link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  border-bottom: 1px solid rgba(253, 253, 253, 0.4);
+  padding-bottom: 2px;
+}
+
+.hero__frame {
+  aspect-ratio: 4 / 3;
+  border: 1px solid color-mix(in oklch, var(--color-gold) 55%, transparent);
+  padding: 10px;
+}
+
+.hero__frame-inner {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #171310, #241c11);
+}
+
+.hero__frame-mark {
+  font-family: var(--font-serif);
+  font-size: 4.5rem;
+  color: color-mix(in oklch, var(--color-gold) 18%, transparent);
+}
+
+.hero__frame-caption {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(253, 253, 253, 0.55);
+  border-top: 1px solid rgba(253, 253, 253, 0.15);
+  padding-top: 8px;
+}
+
 @media (min-width: 768px) {
+  .hero {
+    grid-template-columns: 1.05fr 0.95fr;
+    padding: 5rem 5%;
+    min-height: 80vh;
+  }
+
   .hero__title {
-    font-size: 3rem;
+    font-size: 3.25rem;
+  }
+
+  .hero__frame {
+    aspect-ratio: 4 / 5;
+  }
+
+  .hero__frame-mark {
+    font-size: 6rem;
   }
 }

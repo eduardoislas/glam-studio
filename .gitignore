@@ -1,0 +1,2 @@
+# Angular CLI cache (can appear at repo root depending on where commands are run from)
+.angular/

@@ -9,4 +9,5 @@ import { CONTACT } from '../../shared/contact.data';
 })
 export class FinalCtaComponent {
   readonly whatsappUrl = CONTACT.whatsappUrl;
+  readonly instagramHandle = CONTACT.instagramHandle;
 }

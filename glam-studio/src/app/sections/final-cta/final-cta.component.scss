@@ -1,8 +1,14 @@
 .final-cta {
-  padding: 4rem 1.5rem;
+  padding: 4.5rem 1.5rem;
   text-align: center;
-  background: var(--color-black);
+  background:
+    radial-gradient(500px 350px at 50% 0%, color-mix(in oklch, var(--color-gold) 18%, transparent), transparent 65%),
+    linear-gradient(180deg, var(--color-black) 0%, #1c160c 100%);
   color: var(--color-white);
+}
+
+.final-cta .eyebrow {
+  text-align: center;
 }
 
 .final-cta h2 {
@@ -12,4 +18,19 @@
 .final-cta p {
   margin-bottom: 1.5rem;
   opacity: 0.85;
+  font-weight: 300;
+}
+
+.final-cta__handle {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  .final-cta {
+    padding: 6rem 1.5rem;
+  }
 }

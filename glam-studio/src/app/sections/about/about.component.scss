@@ -1,6 +1,56 @@
+.about {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about h2 {
+  text-align: left;
+}
+
+.about__frame {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--color-gold-line);
+  padding: 8px;
+}
+
+.about__frame-inner {
+  position: relative;
+  height: 100%;
+  background: var(--color-gold-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__frame-mark {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  color: var(--color-gold-line);
+}
+
+.about__frame-caption {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  border-top: 1px solid var(--color-gold-line);
+  padding-top: 8px;
+  text-align: left;
+}
+
 .about p {
-  max-width: 640px;
-  margin: 0 auto;
-  text-align: center;
-  color: #333;
+  color: var(--color-ink-muted);
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .about {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
 }

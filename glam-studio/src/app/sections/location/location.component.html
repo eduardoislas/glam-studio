@@ -1,9 +1,30 @@
 <section id="ubicacion" class="location section">
-  <h2>Horario y ubicación</h2>
-  <div class="location__grid">
+  <div class="location__head">
+    <span class="eyebrow">Visítanos</span>
+    <h2>Horario y ubicación</h2>
+  </div>
+  <div class="location__panel">
     <div class="location__info">
-      <p class="location__address">{{ address }}</p>
-      <p class="location__hours">{{ hours }}</p>
+      <div class="location__row">
+        <svg class="location__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z" />
+          <circle cx="12" cy="9" r="2.5" />
+        </svg>
+        <div>
+          <div class="location__row-label">Dirección</div>
+          <p class="location__address">{{ address }}</p>
+        </div>
+      </div>
+      <div class="location__row">
+        <svg class="location__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <circle cx="12" cy="12" r="8.5" />
+          <path d="M12 7.5V12l3 2" />
+        </svg>
+        <div>
+          <div class="location__row-label">Horario</div>
+          <p class="location__hours">{{ hours }}</p>
+        </div>
+      </div>
     </div>
     <iframe
       class="location__map"

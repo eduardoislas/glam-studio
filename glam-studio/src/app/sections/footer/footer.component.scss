@@ -4,6 +4,7 @@
   background: var(--color-black);
   color: var(--color-white);
   font-size: 0.85rem;
+  border-top: 1px solid color-mix(in oklch, var(--color-gold) 25%, transparent);
 }
 
 .footer__links {

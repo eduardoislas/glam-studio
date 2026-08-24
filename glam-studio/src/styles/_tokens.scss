@@ -2,6 +2,10 @@
   --color-black: #0a0a0a;
   --color-white: #fdfdfd;
   --color-gold: #c9a24b;
+  --color-gold-soft: color-mix(in oklch, var(--color-gold) 10%, white);
+  --color-gold-line: color-mix(in oklch, var(--color-gold) 30%, white);
+  --color-ink-muted: #55524a;
+  --color-ink-soft: #8a8474;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Jost', Arial, sans-serif;
 }
