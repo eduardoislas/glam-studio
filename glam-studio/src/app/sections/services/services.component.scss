@@ -1,0 +1,28 @@
+.services__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+.services__card {
+  padding: 2rem 1.5rem;
+  border: 1px solid #e5e0d5;
+  text-align: center;
+}
+
+.services__card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-black);
+}
+
+.services__card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

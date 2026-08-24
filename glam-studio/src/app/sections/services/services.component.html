@@ -1,0 +1,9 @@
+<section id="servicios" class="services section">
+  <h2>Servicios</h2>
+  <div class="services__grid">
+    <article class="services__card" *ngFor="let service of services">
+      <h3>{{ service.name }}</h3>
+      <p>{{ service.description }}</p>
+    </article>
+  </div>
+</section>
