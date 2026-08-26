@@ -4,11 +4,11 @@
 
 .location__panel {
   display: grid;
-  border: 1px solid var(--color-gold-line);
+  border-top: 1px solid var(--color-gold-line);
 }
 
 .location__info {
-  padding: 2rem 1.5rem;
+  padding: 2rem 0;
 }
 
 .location__row {
@@ -47,6 +47,7 @@
   height: 320px;
   border: 0;
   border-top: 1px solid var(--color-gold-line);
+  filter: grayscale(0.4) contrast(1.05);
 }
 
 @media (min-width: 768px) {
@@ -55,7 +56,7 @@
   }
 
   .location__info {
-    padding: 3rem 2.5rem;
+    padding: 3rem 2.5rem 3rem 0;
   }
 
   .location__map {

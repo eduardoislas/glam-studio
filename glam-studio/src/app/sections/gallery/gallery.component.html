@@ -3,16 +3,19 @@
     <span class="eyebrow">Nuestro trabajo</span>
     <h2>Galería</h2>
   </div>
+  <div class="gallery__ticks" aria-hidden="true"></div>
   <div class="gallery__grid">
     <div
       class="gallery__item"
       [class.gallery__item--lg]="image.size === 'lg'"
       *ngFor="let image of images"
     >
+      <span class="gallery__item-frame frame-code">{{ image.frame }}</span>
       <img [src]="image.src" [alt]="image.alt" loading="lazy" />
       <span class="gallery__item-cap">{{ image.caption }}</span>
     </div>
   </div>
+  <div class="gallery__ticks" aria-hidden="true"></div>
   <p class="gallery__more">
     <a [href]="instagramUrl" target="_blank" rel="noopener"
       >Ver más en Instagram · {{ instagramHandle }}</a

@@ -38,9 +38,9 @@ img {
 .btn-primary {
   display: inline-block;
   padding: 0.75rem 2rem;
-  background: var(--color-gold);
+  background: var(--color-gold-bright);
   color: var(--color-black);
-  border: 1px solid var(--color-gold);
+  border: 1px solid var(--color-gold-bright);
   border-radius: 2px;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -53,7 +53,14 @@ img {
 
 .btn-primary:hover {
   background: transparent;
-  color: var(--color-gold);
+  color: var(--color-gold-bright);
+}
+
+.btn-primary:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-gold-bright);
+  outline-offset: 3px;
 }
 
 .eyebrow {
@@ -63,8 +70,16 @@ img {
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-gold-ink);
   margin-bottom: 1rem;
+}
+
+/* Frame code: mono proof-sheet index, used only against actual photographs. */
+.frame-code {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--color-gold-bright);
 }
 
 .section {
@@ -76,7 +91,12 @@ img {
 .section h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 @media (min-width: 768px) {

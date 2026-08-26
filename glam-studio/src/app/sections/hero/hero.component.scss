@@ -9,6 +9,10 @@
   color: var(--color-white);
 }
 
+.hero .eyebrow {
+  color: var(--color-gold-bright);
+}
+
 .hero__title {
   font-size: 2.25rem;
   margin-bottom: 1rem;
@@ -39,14 +43,26 @@
 }
 
 .hero__frame {
-  aspect-ratio: 4 / 3;
-  border: 1px solid color-mix(in oklch, var(--color-gold) 55%, transparent);
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hero__ticks {
+  height: 6px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-gold-bright) 0,
+    var(--color-gold-bright) 2px,
+    transparent 2px,
+    transparent 14px
+  );
+  opacity: 0.55;
 }
 
 .hero__frame-inner {
   position: relative;
-  height: 100%;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   background: linear-gradient(160deg, #171310, #241c11);
 }
@@ -57,6 +73,25 @@
   object-fit: cover;
   object-position: center top;
   display: block;
+}
+
+.hero__stamp {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 1.75rem 0.9rem 0.65rem;
+  background: linear-gradient(0deg, rgba(10, 9, 7, 0.75), transparent);
+}
+
+.hero__stamp-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  color: rgba(253, 253, 253, 0.75);
 }
 
 @media (min-width: 768px) {
@@ -70,11 +105,7 @@
     font-size: 3.25rem;
   }
 
-  .hero__frame {
+  .hero__frame-inner {
     aspect-ratio: 4 / 5;
-  }
-
-  .hero__frame-mark {
-    font-size: 6rem;
   }
 }

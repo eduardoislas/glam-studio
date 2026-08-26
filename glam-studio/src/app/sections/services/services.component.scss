@@ -9,24 +9,15 @@
 }
 
 .services__card {
-  padding: 2.5rem 1.75rem;
-  text-align: center;
-  background: var(--color-white);
-  border: 1px solid var(--color-gold-line);
-  border-radius: 2px;
-  box-shadow: 0 18px 40px -28px rgba(10, 10, 10, 0.35);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-gold-line);
 }
 
 .services__icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--color-gold-soft);
+  width: 26px;
+  height: 26px;
   color: var(--color-gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .services__card h3 {
@@ -39,18 +30,11 @@
   color: var(--color-ink-muted);
   font-size: 0.95rem;
   font-weight: 300;
-  margin-bottom: 1.25rem;
-}
-
-.services__accent {
-  width: 26px;
-  height: 1px;
-  background: var(--color-gold);
-  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .services__grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
   }
 }

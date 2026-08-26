@@ -2,17 +2,30 @@
   text-align: center;
 }
 
+.gallery__ticks {
+  height: 6px;
+  margin: 0.75rem 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-gold) 0,
+    var(--color-gold) 2px,
+    transparent 2px,
+    transparent 14px
+  );
+  opacity: 0.45;
+}
+
 .gallery__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
+  gap: 2px;
+  background: var(--color-gold-line);
 }
 
 .gallery__item {
   position: relative;
   aspect-ratio: 1 / 1;
-  border: 1px solid var(--color-gold-line);
-  padding: 5px;
+  background: var(--color-white);
 }
 
 .gallery__item img {
@@ -22,11 +35,19 @@
   object-fit: cover;
 }
 
+.gallery__item-frame {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 0.15rem 0.4rem;
+  background: rgba(10, 9, 7, 0.55);
+}
+
 .gallery__item-cap {
   position: absolute;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 0.6rem 0.65rem 0.4rem;
   font-size: 0.62rem;
   letter-spacing: 0.1em;
